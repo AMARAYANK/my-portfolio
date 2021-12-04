@@ -1,0 +1,54 @@
+{{ define "main" }} {{ $paginator := .Paginate .Data.Pages }} 
+
+{{ $image1 :=  resources.Get "images/github.png"}} 
+{{ $image2 := resources.Get "images/linkedin.svg"}}
+{{ $image3 := resources.Get "images/gmail.svg"}}
+
+<h1 style="margin-bottom: 0; font-style: italic; margin-top: 150px;">⚡ A J ⚡</h1>
+<main class="posts">
+  <p
+    style="
+      color: #f16e76;
+      text-align: center;
+      font-size: 1.5rem;
+      font-style: italic;
+    "
+  >
+    ✨ Moments are like <span style="color: #ffc107">{CSS}</span> to the
+    <span style="color: burlywood">< HTML /></span> of our life,
+  </p>
+  <p
+    style="
+      padding-top: 0;
+      color: #f16e76;
+      text-align: center;
+      font-size: 1.5rem;
+      font-style: italic;
+    "
+  >
+    Make those count! ✨
+  </p>
+  {{ if .Content }}
+  <div class="content">{{ .Content }}</div>
+  {{ end }} {{ partial "pagination-list.html" . }}
+</main>
+<div style="display: flex;">
+  <div>
+    <a href="https://github.com/AMARAYANK" style="cursor: pointer;">
+      <img src="{{ $image1.RelPermalink }}" style="width: 45px; height: 45px" />
+    </a>
+  </div>
+  <div>
+    <a href="https://www.linkedin.com/in/amarayank" style="cursor: pointer;">
+      <img src="{{ $image2.RelPermalink }}" style="width: 32px; height: 32px; margin-left: 25px; margin-top: 5px;" />
+    </a>
+  </div>
+  <div>
+    <a href="https://github.com/AMARAYANK" style="cursor: pointer;">
+      <img src="{{ $image3.RelPermalink }}" style="width: 32px; height: 40px; margin-left: 30px; margin-top: 2px; margin-bottom: 100px;" />
+    </a>
+  </div>
+ 
+  
+    
+{{ end }}

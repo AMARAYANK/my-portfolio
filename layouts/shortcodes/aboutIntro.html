@@ -1,0 +1,13 @@
+{{ $image2 := resources.Get "images/hi.png"}}
+
+<div style="display: flex; align-items: center">
+  <h2 style="color: paleturquoise; font-style: italic" ;>Hi, there!</h2>
+  <span style="display: flex; align-items: flex-end">
+    <img
+      style="width: 30px; height: 30px; margin-top: 30px; margin-left: 15px"
+      src="{{ $image2.RelPermalink }}"
+    />
+  </span>
+</div>
+
+

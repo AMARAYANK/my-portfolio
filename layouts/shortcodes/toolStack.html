@@ -1,0 +1,20 @@
+
+{{ $image1 := resources.Get "images/git.png"}}
+{{ $image2 := resources.Get "images/npm.png"}}
+{{ $image3 := resources.Get "images/figma.png"}}
+{{ $image4 := resources.Get "images/github.png"}}
+
+
+
+
+<p style="color: #f16e76; font-style: italic; font-size: 1.3rem;"> Here are a few tools I've used:</p>
+
+<div style="display: flex;" >
+        <img src="{{ $image1.RelPermalink }}" style="height: 50px; width: 50px; margin-left: 20px;"/>
+        <img src="{{ $image2.RelPermalink }}" style="height: 50px; width: 50px; margin-left: 20px;"/>
+        <img src="{{ $image3.RelPermalink }}" style="height: 40px; width: 100px; margin-left: 20px;"/>
+        <img src="{{ $image4.RelPermalink }}" style="height: 50px; width: 50px; margin-left: 20px;"/>
+        
+</div>
+
+<!-- <hr style="margin-top: 10px;" > -->
